@@ -1,7 +1,7 @@
 # About
-Code for the Secret City Wildbots' Charged Up robot.
+Code for the Secret City Wildbots' Crescendo robot.
 
-Programming Lead: Silas
+Programming Lead: Silas (silasrowden@gmail.com)
 
 Controls Mentor: Dr. Luke Scime (lrscime.alpha@gmail.com)
 
