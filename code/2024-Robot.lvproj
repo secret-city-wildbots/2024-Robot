@@ -190,12 +190,6 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="Subsystems" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
-			<Item Name="Ball Handling" Type="Folder">
-				<Item Name="GlobalBallHandling.vi" Type="VI" URL="../GlobalBallHandling.vi"/>
-				<Item Name="InitBallHandling.vi" Type="VI" URL="../InitBallHandling.vi"/>
-				<Item Name="OutputBallHandling.vi" Type="VI" URL="../OutputBallHandling.vi"/>
-				<Item Name="StateBallHandling.vi" Type="VI" URL="../StateBallHandling.vi"/>
-			</Item>
 			<Item Name="Drivebase" Type="Folder">
 				<Item Name="Swerve Toolbox" Type="Folder">
 					<Item Name="FieldOrientedTransform.vi" Type="VI" URL="../FieldOrientedTransform.vi"/>
@@ -247,6 +241,12 @@ AddOutputFilter chunkFilter
 				<Item Name="StateAlarmManagement.vi" Type="VI" URL="../StateAlarmManagement.vi"/>
 				<Item Name="StateHapticEngine.vi" Type="VI" URL="../StateHapticEngine.vi"/>
 				<Item Name="StatePowerManagement.vi" Type="VI" URL="../StatePowerManagement.vi"/>
+			</Item>
+			<Item Name="Note Handling" Type="Folder">
+				<Item Name="GlobalNoteHandling.vi" Type="VI" URL="../GlobalNoteHandling.vi"/>
+				<Item Name="InitNoteHandling.vi" Type="VI" URL="../InitNoteHandling.vi"/>
+				<Item Name="OutputNoteHandling.vi" Type="VI" URL="../OutputNoteHandling.vi"/>
+				<Item Name="StateNoteHandling.vi" Type="VI" URL="../StateNoteHandling.vi"/>
 			</Item>
 			<Item Name="Shooter" Type="Folder">
 				<Item Name="GlobalShooter.vi" Type="VI" URL="../GlobalShooter.vi"/>
@@ -392,6 +392,7 @@ AddOutputFilter chunkFilter
 				<Item Name="CTRE_Phoenix_MotorControl_EnableVoltageCompensation.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Output Config/CTRE_Phoenix_MotorControl_EnableVoltageCompensation.vi"/>
 				<Item Name="CTRE_Phoenix_MotorControl_FactoryDefault.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CTRE_Phoenix_MotorControl_FactoryDefault.vi"/>
 				<Item Name="CTRE_Phoenix_MotorControl_FeedbackDevice_TalonFX.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Controls/CTRE_Phoenix_MotorControl_FeedbackDevice_TalonFX.ctl"/>
+				<Item Name="CTRE_Phoenix_MotorControl_Follow.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CTRE_Phoenix_MotorControl_Follow.vi"/>
 				<Item Name="CTRE_Phoenix_MotorControl_GetDevRefData.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CTRE_Phoenix_MotorControl_GetDevRefData.vi"/>
 				<Item Name="CTRE_Phoenix_MotorControl_LimitSwitchNormal.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Controls/CTRE_Phoenix_MotorControl_LimitSwitchNormal.ctl"/>
 				<Item Name="CTRE_Phoenix_MotorControl_LimitSwitchSource_Local.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Controls/CTRE_Phoenix_MotorControl_LimitSwitchSource_Local.ctl"/>
