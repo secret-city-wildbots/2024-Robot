@@ -124,12 +124,15 @@ AddOutputFilter chunkFilter
 				<Item Name="DriveWaitForTime.vi" Type="VI" URL="../DriveWaitForTime.vi"/>
 				<Item Name="ManipChangeState.vi" Type="VI" URL="../ManipChangeState.vi"/>
 				<Item Name="ManipEnd.vi" Type="VI" URL="../ManipEnd.vi"/>
-				<Item Name="ManipSetIntaking.vi" Type="VI" URL="../../../Holy-Cannoli/code/ManipSetIntaking.vi"/>
+				<Item Name="ManipReverseIntake.vi" Type="VI" URL="../ManipReverseIntake.vi"/>
+				<Item Name="ManipSetIntaking.vi" Type="VI" URL="../ManipSetIntaking.vi"/>
 				<Item Name="ManipSetRobotPosition.vi" Type="VI" URL="../ManipSetRobotPosition.vi"/>
-				<Item Name="ManipSetShooting.vi" Type="VI" URL="../../../Holy-Cannoli/code/ManipSetShooting.vi"/>
+				<Item Name="ManipSetShooting.vi" Type="VI" URL="../ManipSetShooting.vi"/>
+				<Item Name="ManipShooterPrespin.vi" Type="VI" URL="../ManipShooterPrespin.vi"/>
 				<Item Name="ManipWaitForButton.vi" Type="VI" URL="../ManipWaitForButton.vi"/>
 				<Item Name="ManipWaitForDistance.vi" Type="VI" URL="../ManipWaitForDistance.vi"/>
 				<Item Name="ManipWaitForDrive.vi" Type="VI" URL="../ManipWaitForDrive.vi"/>
+				<Item Name="ManipWaitForPiece.vi" Type="VI" URL="../ManipWaitForPiece.vi"/>
 				<Item Name="ManipWaitForTeleOp.vi" Type="VI" URL="../ManipWaitForTeleOp.vi"/>
 				<Item Name="ManipWaitForTime.vi" Type="VI" URL="../ManipWaitForTime.vi"/>
 			</Item>
@@ -245,6 +248,7 @@ AddOutputFilter chunkFilter
 				<Item Name="StatePowerManagement.vi" Type="VI" URL="../StatePowerManagement.vi"/>
 			</Item>
 			<Item Name="Note Handling" Type="Folder">
+				<Property Name="NI.SortType" Type="Int">3</Property>
 				<Item Name="GlobalNoteHandling.vi" Type="VI" URL="../GlobalNoteHandling.vi"/>
 				<Item Name="InitNoteHandling.vi" Type="VI" URL="../InitNoteHandling.vi"/>
 				<Item Name="OutputNoteHandling.vi" Type="VI" URL="../OutputNoteHandling.vi"/>
