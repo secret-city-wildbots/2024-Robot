@@ -1,0 +1,33 @@
+This play shoots, picks up the note touching the stage, and then shoots again.
+*
+start_x_red = 17
+start_y_red = 160
+start_h_red = 0
+start_x_blue = 17
+start_y_blue = 154
+start_h_blue = 0
+*
+DriveDistanceX(60, 0.5)
+DriveAutoTarget(on)
+DriveWaitForManip(5)
+DriveAutoTarget(off)
+DriveAngleH(0, 0.2)
+DriveDistanceX(13, 0.2)
+DriveAutoTarget(on)
+DriveEnd()
+*
+ManipShooterPrespin(on)
+ManipWaitForDrive(1)
+ManipWaitForTime(1000)
+ManipSetShooting(on)
+ManipWaitForTime(1000)
+ManipSetShooting(off)
+ManipSetIntaking(on)
+ManipWaitForDrive(6)
+ManipWaitForTime(1000)
+ManipSetShooting(on)
+ManipWaitForTime(1000)
+ManipSetShooting(off)
+ManipSetIntaking(off)
+ManipShooterPrespin(off)
+ManipEnd()
