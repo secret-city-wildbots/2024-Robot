@@ -273,17 +273,28 @@ AddOutputFilter chunkFilter
 				<Item Name="TestActuatorInterlock.vi" Type="VI" URL="../TestActuatorInterlock.vi"/>
 			</Item>
 			<Item Name="Actuator Wrappers" Type="Folder">
+				<Item Name="Servo" Type="Folder">
+					<Item Name="ServoCommandPosition.vi" Type="VI" URL="../ServoCommandPosition.vi"/>
+				</Item>
+				<Item Name="SparkMAX" Type="Folder">
+					<Item Name="SparkMAXCommandPower.vi" Type="VI" URL="../SparkMAXCommandPower.vi"/>
+				</Item>
+				<Item Name="Talon - Phoenix 5" Type="Folder">
+					<Item Name="TalonFXCalibrateEncoder.vi" Type="VI" URL="../TalonFXCalibrateEncoder.vi"/>
+					<Item Name="TalonFXCommandPosition.vi" Type="VI" URL="../TalonFXCommandPosition.vi"/>
+					<Item Name="TalonFXCommandPower.vi" Type="VI" URL="../TalonFXCommandPower.vi"/>
+					<Item Name="TalonFXConfigMotionMagic.vi" Type="VI" URL="../TalonFXConfigMotionMagic.vi"/>
+					<Item Name="TalonFXConfigPID.vi" Type="VI" URL="../TalonFXConfigPID.vi"/>
+					<Item Name="TalonFXReadEncoder.vi" Type="VI" URL="../TalonFXReadEncoder.vi"/>
+					<Item Name="TalonFXSetCoast.vi" Type="VI" URL="../TalonFXSetCoast.vi"/>
+					<Item Name="TalonFXSetVoltageComp.vi" Type="VI" URL="../TalonFXSetVoltageComp.vi"/>
+					<Item Name="TalonFXZeroEncoder.vi" Type="VI" URL="../TalonFXZeroEncoder.vi"/>
+				</Item>
+				<Item Name="Talon - Phoenix 6" Type="Folder">
+					<Item Name="KrakenCommandPower.vi" Type="VI" URL="../KrakenCommandPower.vi"/>
+				</Item>
 				<Item Name="DoubleSolenoidCommandState.vi" Type="VI" URL="../DoubleSolenoidCommandState.vi"/>
 				<Item Name="PDHSwitchCommandState.vi" Type="VI" URL="../PDHSwitchCommandState.vi"/>
-				<Item Name="TalonFXCalibrateEncoder.vi" Type="VI" URL="../TalonFXCalibrateEncoder.vi"/>
-				<Item Name="TalonFXCommandPosition.vi" Type="VI" URL="../TalonFXCommandPosition.vi"/>
-				<Item Name="TalonFXCommandPower.vi" Type="VI" URL="../TalonFXCommandPower.vi"/>
-				<Item Name="TalonFXConfigMotionMagic.vi" Type="VI" URL="../TalonFXConfigMotionMagic.vi"/>
-				<Item Name="TalonFXConfigPID.vi" Type="VI" URL="../TalonFXConfigPID.vi"/>
-				<Item Name="TalonFXReadEncoder.vi" Type="VI" URL="../TalonFXReadEncoder.vi"/>
-				<Item Name="TalonFXSetCoast.vi" Type="VI" URL="../TalonFXSetCoast.vi"/>
-				<Item Name="TalonFXSetVoltageComp.vi" Type="VI" URL="../TalonFXSetVoltageComp.vi"/>
-				<Item Name="TalonFXZeroEncoder.vi" Type="VI" URL="../TalonFXZeroEncoder.vi"/>
 			</Item>
 			<Item Name="Array Helpers" Type="Folder">
 				<Item Name="BuildRollingArray.vim" Type="VI" URL="../BuildRollingArray.vim"/>
@@ -370,9 +381,48 @@ AddOutputFilter chunkFilter
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Acquire Semaphore.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Acquire Semaphore.vi"/>
 				<Item Name="AddNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/AddNamedSemaphorePrefix.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlCoastOut.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlCoastOut.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDifferentialDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialDutyCycle.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDifferentialFollower.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialFollower.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDifferentialMotionMagicDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialMotionMagicDutyCycle.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDifferentialMotionMagicVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialMotionMagicVoltage.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDifferentialPositionDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialPositionDutyCycle.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDifferentialPositionVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialPositionVoltage.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDifferentialStrictFollower.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialStrictFollower.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDifferentialVelocityDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialVelocityDutyCycle.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDifferentialVelocityVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialVelocityVoltage.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDifferentialVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialVoltage.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDutyCycleOut.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDutyCycleOut.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDynamicMotionMagicDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDynamicMotionMagicDutyCycle.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDynamicMotionMagicTorqueCurrentFOC.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDynamicMotionMagicTorqueCurrentFOC.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlDynamicMotionMagicVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDynamicMotionMagicVoltage.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlFollower.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlFollower.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlMotionMagicDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlMotionMagicDutyCycle.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlMotionMagicExpoDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlMotionMagicExpoDutyCycle.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlMotionMagicExpoTorqueCurrentFOC.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlMotionMagicExpoTorqueCurrentFOC.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlMotionMagicExpoVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlMotionMagicExpoVoltage.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlMotionMagicTorqueCurrentFOC.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlMotionMagicTorqueCurrentFOC.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlMotionMagicVelocityDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlMotionMagicVelocityDutyCycle.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlMotionMagicVelocityTorqueCurrentFOC.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlMotionMagicVelocityTorqueCurrentFOC.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlMotionMagicVelocityVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlMotionMagicVelocityVoltage.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlMotionMagicVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlMotionMagicVoltage.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlMusicTone.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlMusicTone.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlNeutralOut.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlNeutralOut.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlPositionDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlPositionDutyCycle.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlPositionTorqueCurrentFOC.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlPositionTorqueCurrentFOC.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlPositionVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlPositionVoltage.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlStaticBrake.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlStaticBrake.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlStrictFollower.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlStrictFollower.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlTorqueCurrentFOC.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlTorqueCurrentFOC.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlVelocityDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlVelocityDutyCycle.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlVelocityTorqueCurrentFOC.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlVelocityTorqueCurrentFOC.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlVelocityVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlVelocityVoltage.vi"/>
+				<Item Name="c_ctre_phoenix6_RequestControlVoltageOut.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlVoltageOut.vi"/>
+				<Item Name="c_ctre_phoenix_report_error.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix_report_error.vi"/>
 				<Item Name="Cast to Little Endian Byte Array.vim" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/REV Robotics/REVLib/SubVI/Private/Cast to Little Endian Byte Array.vim"/>
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
 				<Item Name="Close File+.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Close File+.vi"/>
+				<Item Name="CoastOut SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/CoastOut SetControl.vi"/>
 				<Item Name="Color Sensor V3 DevRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/REV Robotics/REVLib/Typedef/Color Sensor V3 DevRef.ctl"/>
 				<Item Name="Color Sensor V3 RefNum Registry Get.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/REV Robotics/REVLib/SubVI/Public/Color Sensor V3 RefNum Registry Get.vi"/>
 				<Item Name="Color to RGB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/Color to RGB.vi"/>
@@ -399,7 +449,6 @@ AddOutputFilter chunkFilter
 				<Item Name="CTRE_Phoenix_MotorControl_EnableVoltageCompensation.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Output Config/CTRE_Phoenix_MotorControl_EnableVoltageCompensation.vi"/>
 				<Item Name="CTRE_Phoenix_MotorControl_FactoryDefault.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CTRE_Phoenix_MotorControl_FactoryDefault.vi"/>
 				<Item Name="CTRE_Phoenix_MotorControl_FeedbackDevice_TalonFX.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Controls/CTRE_Phoenix_MotorControl_FeedbackDevice_TalonFX.ctl"/>
-				<Item Name="CTRE_Phoenix_MotorControl_Follow.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CTRE_Phoenix_MotorControl_Follow.vi"/>
 				<Item Name="CTRE_Phoenix_MotorControl_GetDevRefData.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CTRE_Phoenix_MotorControl_GetDevRefData.vi"/>
 				<Item Name="CTRE_Phoenix_MotorControl_LimitSwitchNormal.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Controls/CTRE_Phoenix_MotorControl_LimitSwitchNormal.ctl"/>
 				<Item Name="CTRE_Phoenix_MotorControl_LimitSwitchSource_Local.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Controls/CTRE_Phoenix_MotorControl_LimitSwitchSource_Local.ctl"/>
@@ -468,6 +517,17 @@ AddOutputFilter chunkFilter
 				<Item Name="CTRE_PigeonIMU_PigeonState.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Pigeon IMU/CTRE_PigeonIMU_PigeonState.ctl"/>
 				<Item Name="CTRE_PigeonIMU_RefNumRegistryGet.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Pigeon IMU/CTRE_PigeonIMU_RefNumRegistryGet.vi"/>
 				<Item Name="CTRE_PigeonIMU_RefNumRegistrySet.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Pigeon IMU/CTRE_PigeonIMU_RefNumRegistrySet.vi"/>
+				<Item Name="DeviceReference.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/DeviceReference.ctl"/>
+				<Item Name="DifferentialDutyCycle SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DifferentialDutyCycle SetControl.vi"/>
+				<Item Name="DifferentialFollower SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DifferentialFollower SetControl.vi"/>
+				<Item Name="DifferentialMotionMagicDutyCycle SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DifferentialMotionMagicDutyCycle SetControl.vi"/>
+				<Item Name="DifferentialMotionMagicVoltage SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DifferentialMotionMagicVoltage SetControl.vi"/>
+				<Item Name="DifferentialPositionDutyCycle SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DifferentialPositionDutyCycle SetControl.vi"/>
+				<Item Name="DifferentialPositionVoltage SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DifferentialPositionVoltage SetControl.vi"/>
+				<Item Name="DifferentialStrictFollower SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DifferentialStrictFollower SetControl.vi"/>
+				<Item Name="DifferentialVelocityDutyCycle SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DifferentialVelocityDutyCycle SetControl.vi"/>
+				<Item Name="DifferentialVelocityVoltage SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DifferentialVelocityVoltage SetControl.vi"/>
+				<Item Name="DifferentialVoltage SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DifferentialVoltage SetControl.vi"/>
 				<Item Name="DIO data proto.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/DIO/DIO data proto.ctl"/>
 				<Item Name="DIO proto.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/DIO/DIO proto.ctl"/>
 				<Item Name="DIO Update Ops.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/DIO/DIO Update Ops.ctl"/>
@@ -477,6 +537,10 @@ AddOutputFilter chunkFilter
 				<Item Name="dPWM Update Ops.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/dPWM/dPWM Update Ops.ctl"/>
 				<Item Name="dPWM_PanelSim_Global.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/dPWM/dPWM_PanelSim_Global.vi"/>
 				<Item Name="DriverLib.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Controls/DriverLib.ctl"/>
+				<Item Name="DutyCycleOut SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DutyCycleOut SetControl.vi"/>
+				<Item Name="DynamicMotionMagicDutyCycle SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DynamicMotionMagicDutyCycle SetControl.vi"/>
+				<Item Name="DynamicMotionMagicTorqueCurrentFOC SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DynamicMotionMagicTorqueCurrentFOC SetControl.vi"/>
+				<Item Name="DynamicMotionMagicVoltage SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/DynamicMotionMagicVoltage SetControl.vi"/>
 				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
 				<Item Name="Find First Error.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find First Error.vi"/>
 				<Item Name="FindCloseTagByName.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/FindCloseTagByName.vi"/>
@@ -485,6 +549,7 @@ AddOutputFilter chunkFilter
 				<Item Name="FindEmptyElement.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/FindEmptyElement.vi"/>
 				<Item Name="FindFirstTag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/FindFirstTag.vi"/>
 				<Item Name="FindMatchingCloseTag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/FindMatchingCloseTag.vi"/>
+				<Item Name="Follower SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/Follower SetControl.vi"/>
 				<Item Name="FPGA_AIChannel.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/AI/FPGA_AIChannel.ctl"/>
 				<Item Name="FPGA_CounterCtrSystemIndex.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/Counter/FPGA_CounterCtrSystemIndex.ctl"/>
 				<Item Name="FPGA_CounterERRInvalidResource.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/Counter/FPGA_CounterERRInvalidResource.vi"/>
@@ -521,12 +586,23 @@ AddOutputFilter chunkFilter
 				<Item Name="FPGA_SystemOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/System/FPGA_SystemOpen.vi"/>
 				<Item Name="FPGA_SystemStart Async Agent.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/System/FPGA_SystemStart Async Agent.vi"/>
 				<Item Name="GetNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/GetNamedSemaphorePrefix.vi"/>
+				<Item Name="HandleError.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/HandleError.vi"/>
 				<Item Name="i2c_bus.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/i2clib/i2c_bus.ctl"/>
 				<Item Name="Is Value Changed.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Is Value Changed.vim"/>
 				<Item Name="Joystick data proto.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/Joystick/Joystick data proto.ctl"/>
 				<Item Name="Joystick proto.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/Joystick/Joystick proto.ctl"/>
 				<Item Name="Joystick Update Ops.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/Joystick/Joystick Update Ops.ctl"/>
 				<Item Name="Joystick_PanelSim_Global.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/Joystick/Joystick_PanelSim_Global.vi"/>
+				<Item Name="MotionMagicDutyCycle SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/MotionMagicDutyCycle SetControl.vi"/>
+				<Item Name="MotionMagicExpoDutyCycle SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/MotionMagicExpoDutyCycle SetControl.vi"/>
+				<Item Name="MotionMagicExpoTorqueCurrentFOC SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/MotionMagicExpoTorqueCurrentFOC SetControl.vi"/>
+				<Item Name="MotionMagicExpoVoltage SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/MotionMagicExpoVoltage SetControl.vi"/>
+				<Item Name="MotionMagicTorqueCurrentFOC SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/MotionMagicTorqueCurrentFOC SetControl.vi"/>
+				<Item Name="MotionMagicVelocityDutyCycle SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/MotionMagicVelocityDutyCycle SetControl.vi"/>
+				<Item Name="MotionMagicVelocityTorqueCurrentFOC SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/MotionMagicVelocityTorqueCurrentFOC SetControl.vi"/>
+				<Item Name="MotionMagicVelocityVoltage SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/MotionMagicVelocityVoltage SetControl.vi"/>
+				<Item Name="MotionMagicVoltage SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/MotionMagicVoltage SetControl.vi"/>
+				<Item Name="MusicTone SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/MusicTone SetControl.vi"/>
 				<Item Name="NetComm_AllianceStation.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_AllianceStation.ctl"/>
 				<Item Name="NetComm_CAN_GetStatus.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_CAN_GetStatus.vi"/>
 				<Item Name="NetComm_CAN_OpenStreamSession.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_CAN_OpenStreamSession.vi"/>
@@ -551,6 +627,7 @@ AddOutputFilter chunkFilter
 				<Item Name="NetComm_UnloadCPPStartupProgram.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UnloadCPPStartupProgram.vi"/>
 				<Item Name="NetComm_UsageReport_report.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_report.vi"/>
 				<Item Name="NetComm_UsageReport_ResourceType.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_UsageReport_ResourceType.ctl"/>
+				<Item Name="NeutralOut SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/NeutralOut SetControl.vi"/>
 				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_Gmath.lvlib" Type="Library" URL="/&lt;vilib&gt;/gmath/NI_Gmath.lvlib"/>
 				<Item Name="NI_Vision_Development_Module.lvlib" Type="Library" URL="/&lt;vilib&gt;/vision/NI_Vision_Development_Module.lvlib"/>
@@ -621,6 +698,9 @@ AddOutputFilter chunkFilter
 				<Item Name="Open File+.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Open File+.vi"/>
 				<Item Name="Open_Create_Replace File.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/Open_Create_Replace File.vi"/>
 				<Item Name="ParseXMLFragments.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/xml.llb/ParseXMLFragments.vi"/>
+				<Item Name="PositionDutyCycle SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/PositionDutyCycle SetControl.vi"/>
+				<Item Name="PositionTorqueCurrentFOC SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/PositionTorqueCurrentFOC SetControl.vi"/>
+				<Item Name="PositionVoltage SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/PositionVoltage SetControl.vi"/>
 				<Item Name="PWM data proto.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/PWM/PWM data proto.ctl"/>
 				<Item Name="PWM proto.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/PWM/PWM proto.ctl"/>
 				<Item Name="PWM Update Ops.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Simulation/Protocol/Devices/PWM/PWM Update Ops.ctl"/>
@@ -694,10 +774,18 @@ AddOutputFilter chunkFilter
 				<Item Name="SPARK Set Sensor Position.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/REV Robotics/REVLib/SubVI/Public/SPARK Set Sensor Position.vi"/>
 				<Item Name="spi_bus.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/spilib/spi_bus.ctl"/>
 				<Item Name="Stall Data Flow.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Stall Data Flow.vim"/>
+				<Item Name="StaticBrake SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/StaticBrake SetControl.vi"/>
+				<Item Name="StrictFollower SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/StrictFollower SetControl.vi"/>
 				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
+				<Item Name="TalonFXSetter.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/TalonFXSetter.vi"/>
+				<Item Name="TorqueCurrentFOC SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/TorqueCurrentFOC SetControl.vi"/>
 				<Item Name="Trim Whitespace One-Sided.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace One-Sided.vi"/>
 				<Item Name="Trim Whitespace.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace.vi"/>
 				<Item Name="Validate Semaphore Size.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Validate Semaphore Size.vi"/>
+				<Item Name="VelocityDutyCycle SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/VelocityDutyCycle SetControl.vi"/>
+				<Item Name="VelocityTorqueCurrentFOC SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/VelocityTorqueCurrentFOC SetControl.vi"/>
+				<Item Name="VelocityVoltage SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/VelocityVoltage SetControl.vi"/>
+				<Item Name="VoltageOut SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/VoltageOut SetControl.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				<Item Name="WPI_AnalogChannelDevRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogChannel/WPI_AnalogChannelDevRef.ctl"/>
 				<Item Name="WPI_AnalogChannelRefNum Registry Get.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogChannel/WPI_AnalogChannelRefNum Registry Get.vi"/>
