@@ -1,0 +1,13 @@
+This play shoots from the subwoofer, picks up a note and then shoots again.
+*
+start_x_red = 53
+start_y_red = 212
+start_h_red = 0
+start_x_blue = 53
+start_y_blue = 104
+start_h_blue = 0
+*
+DriveDistanceX(37, 0.3)
+DriveEnd()
+*
+ManipEnd()
