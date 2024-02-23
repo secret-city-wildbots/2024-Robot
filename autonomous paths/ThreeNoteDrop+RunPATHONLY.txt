@@ -1,0 +1,21 @@
+This play shoots from the subwoofer, picks up a note and then shoots again.
+*
+start_x_red = 54
+start_y_red = 17
+start_h_red = 0
+start_x_blue = 54
+start_y_blue = 298.6
+start_h_blue = 0
+*
+DrivePath(6, 10, -1, ThreeNoteDrop+Run1, robot_suffix)
+DriveWaitForTime(1000)
+DrivePath(6, 10, -1, ThreeNoteDrop+Run2, robot_suffix)
+DriveWaitForTime(1000)
+DriveDistanceX(-30,-0.2)
+DriveAngleH(20, 0.1)
+DriveWaitForTime(1000)
+DriveDistanceX(-30, -0.2)
+DriveAngleH(45, 0.1)
+DriveEnd()
+*
+ManipEnd()

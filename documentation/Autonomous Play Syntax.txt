@@ -111,3 +111,36 @@ ManipWaitForTeleOp()
 # This VI waits for the robot mode to be TeleOp Enabled
 
 -----------------------------------------------------------
+
+ManipSetIntaking(param1)
+# Turns on and off the intake
+
+1. "on" or "off"
+
+-----------------------------------------------------------
+
+ManipSetShooting(param1)
+# Turns on and off the shooter
+
+1. "on" or "off"
+
+-----------------------------------------------------------
+
+ManipWaitForPiece()
+# Pauses the manipulator sequencer until the robot has a note.
+
+-----------------------------------------------------------
+
+ManipShooterPrespin(param1)
+# Prespins the shooter motors.
+
+1. "on" or "off"
+
+-----------------------------------------------------------
+
+ManipReverseIntake(param1)
+# Turns on and reverses the outer intake.
+
+1. "on" or "off"
+
+-----------------------------------------------------------
