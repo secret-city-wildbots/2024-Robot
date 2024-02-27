@@ -72,6 +72,13 @@ ManipEnd()
 
 -----------------------------------------------------------
 
+ManipChangeState(param1)
+# This VI changes the robot's master or shooter state.
+
+1. Specifies the desired robot master or shooter state. 0=stow, 1=speaker, 2=amp, 3=TACO, 4=subwoofer, 5=stage
+
+-----------------------------------------------------------
+
 DriveSetRobotPosition(param1, param2)
 # This VI manually updates the robot's position, use to zero-out accumulated pose error. Pass -1 to re-sync with fused pose.
 

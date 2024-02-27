@@ -364,6 +364,8 @@ AddOutputFilter chunkFilter
 				</Item>
 				<Item Name="Talon - Phoenix 6" Type="Folder">
 					<Item Name="KrakenCommandPower.vi" Type="VI" URL="../KrakenCommandPower.vi"/>
+					<Item Name="KrakenCommandVelocity.vi" Type="VI" URL="../KrakenCommandVelocity.vi"/>
+					<Item Name="KrakenConfigPID.vi" Type="VI" URL="../KrakenConfigPID.vi"/>
 				</Item>
 				<Item Name="DoubleSolenoidCommandState.vi" Type="VI" URL="../DoubleSolenoidCommandState.vi"/>
 				<Item Name="PDHSwitchCommandState.vi" Type="VI" URL="../PDHSwitchCommandState.vi"/>
@@ -456,6 +458,7 @@ AddOutputFilter chunkFilter
 				<Item Name="AddNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/AddNamedSemaphorePrefix.vi"/>
 				<Item Name="c_ctre_phoenix6_encode_device.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_encode_device.vi"/>
 				<Item Name="c_ctre_phoenix6_free_memory.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_free_memory.vi"/>
+				<Item Name="c_ctre_phoenix6_get_signal.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_get_signal.vi"/>
 				<Item Name="c_ctre_phoenix6_RequestControlCoastOut.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlCoastOut.vi"/>
 				<Item Name="c_ctre_phoenix6_RequestControlDifferentialDutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialDutyCycle.vi"/>
 				<Item Name="c_ctre_phoenix6_RequestControlDifferentialFollower.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/c_interface/c_ctre_phoenix6_RequestControlDifferentialFollower.vi"/>
@@ -665,7 +668,86 @@ AddOutputFilter chunkFilter
 				<Item Name="FPGA_SystemGet.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/System/FPGA_SystemGet.vi"/>
 				<Item Name="FPGA_SystemOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/System/FPGA_SystemOpen.vi"/>
 				<Item Name="FPGA_SystemStart Async Agent.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/System/FPGA_SystemStart Async Agent.vi"/>
+				<Item Name="GetAllFaults.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetAllFaults.vi"/>
+				<Item Name="GetAllStickyFaults.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetAllStickyFaults.vi"/>
+				<Item Name="GetFault_BootDuringEnable.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_BootDuringEnable.vi"/>
+				<Item Name="GetFault_DeviceTemp.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_DeviceTemp.vi"/>
+				<Item Name="GetFault_Hardware.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_Hardware.vi"/>
+				<Item Name="GetFault_ProcTemp.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_ProcTemp.vi"/>
+				<Item Name="GetFault_TALONFX_BridgeBrownout.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_BridgeBrownout.vi"/>
+				<Item Name="GetFault_TALONFX_ForwardHardLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_ForwardHardLimit.vi"/>
+				<Item Name="GetFault_TALONFX_ForwardSoftLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_ForwardSoftLimit.vi"/>
+				<Item Name="GetFault_TALONFX_FusedSensorOutOfSync.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_FusedSensorOutOfSync.vi"/>
+				<Item Name="GetFault_TALONFX_MissingDifferentialFX.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_MissingDifferentialFX.vi"/>
+				<Item Name="GetFault_TALONFX_MissingRemoteSensor.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_MissingRemoteSensor.vi"/>
+				<Item Name="GetFault_TALONFX_OverSupplyV.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_OverSupplyV.vi"/>
+				<Item Name="GetFault_TALONFX_RemoteSensorPosOverflow.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_RemoteSensorPosOverflow.vi"/>
+				<Item Name="GetFault_TALONFX_RemoteSensorReset.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_RemoteSensorReset.vi"/>
+				<Item Name="GetFault_TALONFX_ReverseHardLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_ReverseHardLimit.vi"/>
+				<Item Name="GetFault_TALONFX_ReverseSoftLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_ReverseSoftLimit.vi"/>
+				<Item Name="GetFault_TALONFX_StatorCurrLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_StatorCurrLimit.vi"/>
+				<Item Name="GetFault_TALONFX_SupplyCurrLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_SupplyCurrLimit.vi"/>
+				<Item Name="GetFault_TALONFX_UnstableSupplyV.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_UnstableSupplyV.vi"/>
+				<Item Name="GetFault_TALONFX_UsingFusedCCWhileUnlicensed.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_TALONFX_UsingFusedCCWhileUnlicensed.vi"/>
+				<Item Name="GetFault_Undervoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_Undervoltage.vi"/>
+				<Item Name="GetFault_UnlicensedFeatureInUse.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetFault_UnlicensedFeatureInUse.vi"/>
+				<Item Name="GetForwardLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetForwardLimit.vi"/>
 				<Item Name="GetNamedSemaphorePrefix.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/GetNamedSemaphorePrefix.vi"/>
+				<Item Name="GetPRO_AvgPosAndVel_Position.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_AvgPosAndVel_Position.vi"/>
+				<Item Name="GetPRO_AvgPosAndVel_Velocity.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_AvgPosAndVel_Velocity.vi"/>
+				<Item Name="GetPRO_DiffPIDOutput_Slot.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_DiffPIDOutput_Slot.vi"/>
+				<Item Name="GetPRO_DiffPosAndVel_Position.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_DiffPosAndVel_Position.vi"/>
+				<Item Name="GetPRO_DiffPosAndVel_Velocity.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_DiffPosAndVel_Velocity.vi"/>
+				<Item Name="GetPRO_MotorOutput_BridgeType_Public.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_MotorOutput_BridgeType_Public.vi"/>
+				<Item Name="GetPRO_MotorOutput_DutyCycle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_MotorOutput_DutyCycle.vi"/>
+				<Item Name="GetPRO_MotorOutput_MotorVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_MotorOutput_MotorVoltage.vi"/>
+				<Item Name="GetPRO_MotorOutput_RotorPolarity.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_MotorOutput_RotorPolarity.vi"/>
+				<Item Name="GetPRO_MotorOutput_TorqueCurrent.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_MotorOutput_TorqueCurrent.vi"/>
+				<Item Name="GetPRO_PIDOutput_Slot.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_PIDOutput_Slot.vi"/>
+				<Item Name="GetPRO_PIDStateEnables_DeviceEnable.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_PIDStateEnables_DeviceEnable.vi"/>
+				<Item Name="GetPRO_PIDStateEnables_IsMotionMagicRunning.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_PIDStateEnables_IsMotionMagicRunning.vi"/>
+				<Item Name="GetPRO_PosAndVel_Acceleration.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_PosAndVel_Acceleration.vi"/>
+				<Item Name="GetPRO_PosAndVel_Position.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_PosAndVel_Position.vi"/>
+				<Item Name="GetPRO_PosAndVel_Velocity.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_PosAndVel_Velocity.vi"/>
+				<Item Name="GetPRO_RotorPosAndVel_Position.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_RotorPosAndVel_Position.vi"/>
+				<Item Name="GetPRO_RotorPosAndVel_Velocity.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_RotorPosAndVel_Velocity.vi"/>
+				<Item Name="GetPRO_SupplyAndTemp_DeviceTemp.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_SupplyAndTemp_DeviceTemp.vi"/>
+				<Item Name="GetPRO_SupplyAndTemp_DeviceTemp2.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_SupplyAndTemp_DeviceTemp2.vi"/>
+				<Item Name="GetPRO_SupplyAndTemp_ProcessorTemp.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_SupplyAndTemp_ProcessorTemp.vi"/>
+				<Item Name="GetPRO_SupplyAndTemp_StatorCurrent.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_SupplyAndTemp_StatorCurrent.vi"/>
+				<Item Name="GetPRO_SupplyAndTemp_SupplyCurrent.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_SupplyAndTemp_SupplyCurrent.vi"/>
+				<Item Name="GetPRO_SupplyAndTemp_SupplyVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetPRO_SupplyAndTemp_SupplyVoltage.vi"/>
+				<Item Name="GetReverseLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetReverseLimit.vi"/>
+				<Item Name="GetStickyFault_BootDuringEnable.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_BootDuringEnable.vi"/>
+				<Item Name="GetStickyFault_DeviceTemp.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_DeviceTemp.vi"/>
+				<Item Name="GetStickyFault_Hardware.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_Hardware.vi"/>
+				<Item Name="GetStickyFault_ProcTemp.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_ProcTemp.vi"/>
+				<Item Name="GetStickyFault_TALONFX_BridgeBrownout.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_BridgeBrownout.vi"/>
+				<Item Name="GetStickyFault_TALONFX_ForwardHardLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_ForwardHardLimit.vi"/>
+				<Item Name="GetStickyFault_TALONFX_ForwardSoftLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_ForwardSoftLimit.vi"/>
+				<Item Name="GetStickyFault_TALONFX_FusedSensorOutOfSync.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_FusedSensorOutOfSync.vi"/>
+				<Item Name="GetStickyFault_TALONFX_MissingDifferentialFX.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_MissingDifferentialFX.vi"/>
+				<Item Name="GetStickyFault_TALONFX_MissingRemoteSensor.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_MissingRemoteSensor.vi"/>
+				<Item Name="GetStickyFault_TALONFX_OverSupplyV.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_OverSupplyV.vi"/>
+				<Item Name="GetStickyFault_TALONFX_RemoteSensorPosOverflow.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_RemoteSensorPosOverflow.vi"/>
+				<Item Name="GetStickyFault_TALONFX_RemoteSensorReset.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_RemoteSensorReset.vi"/>
+				<Item Name="GetStickyFault_TALONFX_ReverseHardLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_ReverseHardLimit.vi"/>
+				<Item Name="GetStickyFault_TALONFX_ReverseSoftLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_ReverseSoftLimit.vi"/>
+				<Item Name="GetStickyFault_TALONFX_StatorCurrLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_StatorCurrLimit.vi"/>
+				<Item Name="GetStickyFault_TALONFX_SupplyCurrLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_SupplyCurrLimit.vi"/>
+				<Item Name="GetStickyFault_TALONFX_UnstableSupplyV.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_UnstableSupplyV.vi"/>
+				<Item Name="GetStickyFault_TALONFX_UsingFusedCCWhileUnlicensed.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_TALONFX_UsingFusedCCWhileUnlicensed.vi"/>
+				<Item Name="GetStickyFault_Undervoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_Undervoltage.vi"/>
+				<Item Name="GetStickyFault_UnlicensedFeatureInUse.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetStickyFault_UnlicensedFeatureInUse.vi"/>
+				<Item Name="GetTalonFX_ControlMode.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetTalonFX_ControlMode.vi"/>
+				<Item Name="GetTalonFX_DifferentialControlMode.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetTalonFX_DifferentialControlMode.vi"/>
+				<Item Name="GetTalonFX_MotorType.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetTalonFX_MotorType.vi"/>
+				<Item Name="GetVersion_Bugfix.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetVersion_Bugfix.vi"/>
+				<Item Name="GetVersion_Build.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetVersion_Build.vi"/>
+				<Item Name="GetVersion_Full.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetVersion_Full.vi"/>
+				<Item Name="GetVersion_IsProLicensed.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetVersion_IsProLicensed.vi"/>
+				<Item Name="GetVersion_Major.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetVersion_Major.vi"/>
+				<Item Name="GetVersion_Minor.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/getters/GetVersion_Minor.vi"/>
 				<Item Name="HandleError.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/HandleError.vi"/>
 				<Item Name="i2c_bus.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/i2clib/i2c_bus.ctl"/>
 				<Item Name="Is Value Changed.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Is Value Changed.vim"/>
@@ -861,6 +943,7 @@ AddOutputFilter chunkFilter
 				<Item Name="System Exec.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/System Exec.vi"/>
 				<Item Name="TalonFX_open.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/TalonFX_open.vi"/>
 				<Item Name="TalonFXConfigurator.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/TalonFXConfigurator.vi"/>
+				<Item Name="TalonFXGetters.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/TalonFXGetters.vi"/>
 				<Item Name="TalonFXSetter.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/TalonFXSetter.vi"/>
 				<Item Name="TorqueCurrentFOC SetControl.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix6/controls/TorqueCurrentFOC SetControl.vi"/>
 				<Item Name="Trim Whitespace One-Sided.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Trim Whitespace One-Sided.vi"/>
