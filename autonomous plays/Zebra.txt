@@ -8,6 +8,39 @@ start_x_blue = 124
 start_y_blue = 62
 start_h_blue = 0
 *
+DriveWaitForManip(14) # wait until manipulator sequence is complete
+DriveWaitForButton()
+DriveDistanceX(400, 0.2) # drive forward
+DriveWaitForTime(2000)
+DriveDistanceY(200, 0.2) # drive left
+DriveWaitForTime(2000)
+DriveDistanceX(-400, -0.2) # drive backward
+DriveWaitForTime(2000)
+DriveDistanceY(-200, -0.2) # drive right
+DriveWaitForTime(2000)
+DriveAngleH(180, 0.2) # rotate counter-clockwise
+DriveAngleH(0, 0.2) # complete rotation
+DriveWaitForButton()
+DriveDistanceX(350, 1.0) # high gear sprint down-field
 DriveEnd()
 *
+ManipWaitForTeleOp()
+ManipSetRobotPosition(124,62) # set robot position to consistent location
+ManipWaitForButton() # wait for a human to start the sequence
+ManipSetIntaking(on) # test the intake
+ManipWaitForTime(4000)
+ManipWaitForButton()
+ManipSetIntaking(off)
+ManipChangeState(2) # go to amp
+ManipWaitForButton()
+ManipChangeState(0) # go to stow
+ManipWaitForButton()
+ManipShooterPrespin(on) # test the shooter
+ManipWaitForTime(4000)
+ManipWaitForButton()
+ManipShooterPrespin(off)
+ManipSetShooting(on) # test the indexer
+ManipWaitForTime(4000)
+ManipWaitForButton()
+ManipSetShooting(off)
 ManipEnd()
