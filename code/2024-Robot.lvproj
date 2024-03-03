@@ -354,6 +354,7 @@ AddOutputFilter chunkFilter
 					<Item Name="TalonFXCalibrateEncoder.vi" Type="VI" URL="../TalonFXCalibrateEncoder.vi"/>
 					<Item Name="TalonFXCommandPosition.vi" Type="VI" URL="../TalonFXCommandPosition.vi"/>
 					<Item Name="TalonFXCommandPower.vi" Type="VI" URL="../TalonFXCommandPower.vi"/>
+					<Item Name="TalonFXCommandVelocity.vi" Type="VI" URL="../TalonFXCommandVelocity.vi"/>
 					<Item Name="TalonFXConfigMotionMagic.vi" Type="VI" URL="../TalonFXConfigMotionMagic.vi"/>
 					<Item Name="TalonFXConfigPID.vi" Type="VI" URL="../TalonFXConfigPID.vi"/>
 					<Item Name="TalonFXReadEncoder.vi" Type="VI" URL="../TalonFXReadEncoder.vi"/>
@@ -1187,7 +1188,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_localDestDir" Type="Path">/C/Git Checkouts/Robot Builds/2023</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6782B190-04E1-4A41-93AB-3F357B35791E}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">92</Property>
+				<Property Name="Bld_version.build" Type="Int">95</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
