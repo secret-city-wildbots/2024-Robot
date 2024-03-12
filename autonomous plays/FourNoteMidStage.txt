@@ -1,0 +1,52 @@
+This play does nothing
+*
+start_x_red = 57
+start_y_red = 101
+start_h_red = 0
+start_x_blue = 57
+start_y_blue = 214
+start_h_blue = 0
+*
+DriveWaitForManip(4)
+DrivePath(6,10,-1,SubwooferToStage)
+DriveWaitForManip(13)
+DrivePath(6,10,-1,StageToSubNote,robot_suffix)
+DriveWaitForManip(22)
+DrivePath(6,10,-1,SubNoteToAmpNote,robot_suffix)
+DriveEnd()
+*
+ManipShooterPrespin(on)
+ManipWaitForTime(200)
+ManipSetShooting(on)
+ManipWaitForTime(500)
+ManipSetShooting(off)
+ManipChangeState(0)
+ManipSetIntaking(on)
+ManipWaitForDrive(2)
+ManipChangeState(1)
+ManipChangeState(3)
+ManipWaitForTime(200)
+ManipSetShooting(on)
+ManipWaitForTime(1000)
+ManipSetShooting(off)
+ManipChangeState(0)
+ManipSetIntaking(on)
+ManipWaitForDrive(4)
+ManipChangeState(1)
+ManipChangeState(3)
+ManipWaitForTime(200)
+ManipSetShooting(on)
+ManipWaitForTime(500)
+ManipSetShooting(off)
+ManipChangeState(0)
+ManipSetIntaking(on)
+ManipWaitForDrive(6)
+ManipChangeState(1)
+ManipChangeState(3)
+ManipWaitForTime(200)
+ManipSetShooting(on)
+ManipWaitForTime(500)
+ManipSetShooting(off)
+ManipSetIntaking(off)
+ManipShooterPrespin(off)
+ManipEnd()
