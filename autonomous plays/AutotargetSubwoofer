@@ -1,0 +1,22 @@
+This play drives back from the subwoofer and uses taco to shoot
+*
+start_x_red = 53
+start_y_red = 101
+start_h_red = 0
+start_x_blue = 57
+start_y_blue = 214
+start_h_blue = 0
+*
+DrivePath(6,10,-1,SubwooferToAmpNote,robot_suffix)
+DriveEnd()
+*
+ManipChangeState(1)
+ManipChangeState(3)
+ManipShooterPrespin(on)
+ManipWaitForTime(1000)
+ManipWaitForDrive(1)
+ManipSetShooting(on)
+ManipWaitForTime(500)
+ManipSetShooting(off)
+ManipShooterPrespin(off)
+ManipEnd()
