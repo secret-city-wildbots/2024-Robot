@@ -1,0 +1,13 @@
+This play does nothing
+*
+start_x_red = 70
+start_y_red = 260
+start_h_red = 0
+start_x_blue = 70
+start_y_blue = 260
+start_h_blue = 0
+*
+DrivePath(10, 5, -1, strafePIDcalibrate, robot_suffix)
+DriveEnd()
+*
+ManipEnd()
