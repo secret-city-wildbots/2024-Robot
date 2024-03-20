@@ -1,36 +1,31 @@
-This play does nothing
+This play drives back from the subwoofer and uses taco to shoot
 *
-start_x_red = 57
+start_x_red = 53
 start_y_red = 101
 start_h_red = 0
 start_x_blue = 57
 start_y_blue = 214
 start_h_blue = 0
 *
-DriveWaitForManip(4)
-DriveDistanceX(45, 0.3)
-DriveDistanceX(-45, -0.3)
-DriveWaitForTime(500)
-DriveWaitForManip(9)
-DrivePath(6,10,-1,SubwooferToStage,robot_suffix)
-DrivePath(6,10,-1,StageToSubwoofer,robot_suffix)
+DriveWaitForManip(7)
+DrivePath(6,10,-1,SubwooferToAmpNote,robot_suffix)
+DriveWaitForManip(
+DrivePath(6,10,-1,AmpNoteToCenter,robot_suffix)
 DriveEnd()
 *
+ManipChangeState(0)
 ManipShooterPrespin(on)
-ManipWaitForTime(1000)
+ManipWaitForTime(200)
 ManipSetShooting(on)
-ManipWaitForTime(500)
+ManipWaitForTime(200)
 ManipSetShooting(off)
 ManipSetIntaking(on)
-ManipWaitForDrive(4)
+ManipWaitForDrive(2)
+ManipChangeState(1)
+ManipChangeState(3)
+ManipWaitForTime(200)
 ManipSetShooting(on)
-ManipWaitForTime(1000)
+ManipWaitForTime(200)
 ManipSetShooting(off)
-ManipSetIntaking(on)
-ManipWaitForDrive(7)
-ManipSetShooting(on)
-ManipWaitForTime(1000)
-ManipSetShooting(off)
-ManipSetIntaking(off)
 ManipShooterPrespin(off)
 ManipEnd()

@@ -7,16 +7,23 @@ start_x_blue = 57
 start_y_blue = 214
 start_h_blue = 0
 *
+DriveWaitForManip(7)
 DrivePath(6,10,-1,SubwooferToAmpNote,robot_suffix)
 DriveEnd()
 *
+ManipChangeState(0)
+ManipShooterPrespin(on)
+ManipWaitForTime(200)
+ManipSetShooting(on)
+ManipWaitForTime(200)
+ManipSetShooting(off)
+ManipSetIntaking(on)
+ManipWaitForDrive(2)
 ManipChangeState(1)
 ManipChangeState(3)
-ManipShooterPrespin(on)
-ManipWaitForTime(1000)
-ManipWaitForDrive(1)
+ManipWaitForTime(200)
 ManipSetShooting(on)
-ManipWaitForTime(500)
+ManipWaitForTime(200)
 ManipSetShooting(off)
 ManipShooterPrespin(off)
 ManipEnd()
