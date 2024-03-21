@@ -1,4 +1,4 @@
-This play drives back from the subwoofer and uses taco to shoot
+This play shoots the starting note, then drives back and auto-targets to shoot the middle note, and the one closest to the amp
 *
 start_x_red = 53
 start_y_red = 101
@@ -9,7 +9,7 @@ start_h_blue = 0
 *
 DriveWaitForManip(7)
 DrivePath(6,10,-1,SubwooferToAmpNote,robot_suffix)
-DriveWaitForManip(
+DriveWaitForManip(14)
 DrivePath(6,10,-1,AmpNoteToCenter,robot_suffix)
 DriveEnd()
 *
@@ -21,6 +21,14 @@ ManipWaitForTime(200)
 ManipSetShooting(off)
 ManipSetIntaking(on)
 ManipWaitForDrive(2)
+ManipChangeState(1)
+ManipChangeState(3)
+ManipWaitForTime(200)
+ManipSetShooting(on)
+ManipWaitForTime(200)
+ManipSetIntaking(on)
+ManipSetShooting(off)
+ManipWaitForDrive(4)
 ManipChangeState(1)
 ManipChangeState(3)
 ManipWaitForTime(200)
