@@ -1,5 +1,4 @@
 Performs an automated systems check. This play should only be run with the robot on blocks or a cart.
-
 *
 start_x_red = 124
 start_y_red = 62
@@ -8,7 +7,7 @@ start_x_blue = 124
 start_y_blue = 62
 start_h_blue = 0
 *
-DriveWaitForManip(14) # wait until manipulator sequence is complete
+DriveWaitForManip(16) # wait until manipulator sequence is complete
 DriveWaitForButton()
 DriveDistanceX(400, 0.2) # drive forward
 DriveWaitForTime(2000)
@@ -24,11 +23,14 @@ DriveWaitForButton()
 DriveDistanceX(350, 1.0) # high gear sprint down-field
 DriveEnd()
 *
+
+
+
+
 ManipWaitForTeleOp()
 ManipSetRobotPosition(124,62) # set robot position to consistent location
 ManipWaitForButton() # wait for a human to start the sequence
 ManipSetIntaking(on) # test the intake
-ManipWaitForTime(4000)
 ManipWaitForButton()
 ManipSetIntaking(off)
 ManipChangeState(2) # go to amp
@@ -36,11 +38,9 @@ ManipWaitForButton()
 ManipChangeState(0) # go to stow
 ManipWaitForButton()
 ManipShooterPrespin(on) # test the shooter
-ManipWaitForTime(4000)
 ManipWaitForButton()
 ManipShooterPrespin(off)
 ManipSetShooting(on) # test the indexer
-ManipWaitForTime(4000)
 ManipWaitForButton()
 ManipSetShooting(off)
 ManipEnd()

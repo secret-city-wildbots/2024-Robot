@@ -7,15 +7,16 @@ start_x_blue = 37
 start_y_blue = 267
 start_h_blue = 60
 *
-DriveWaitForManip(5)
+DriveWaitForManip(3)
 DrivePath(6,10,-1,AmpSubToAmpNote,robot_suffix)
-DriveWaitForManip(13)
+DriveWaitForManip(11)
 DrivePath(6,10,-1,AmpNoteToMidField,robot_suffix)
 DrivePath(6,10,-1,MidFieldToShootCenter,robot_suffix)
-DriveWaitForManip(21)
+DriveWaitForManip(19)
 DrivePath(6,10,-1,ShootCenterToCenter,robot_suffix)
 DriveEnd()
 *
+
 ManipChangeState(0)
 ManipShooterPrespin(on)
 ManipWaitForTime(200)

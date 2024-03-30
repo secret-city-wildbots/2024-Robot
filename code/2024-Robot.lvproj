@@ -245,6 +245,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Odometry" Type="Folder">
 					<Item Name="CalculateRobotVelocityAcceleration.vi" Type="VI" URL="../CalculateRobotVelocityAcceleration.vi"/>
 					<Item Name="ConvertFalconDriveEncoders.vi" Type="VI" URL="../ConvertFalconDriveEncoders.vi"/>
+					<Item Name="GetShifterState.vi" Type="VI" URL="../GetShifterState.vi"/>
 					<Item Name="GetSwerveAbsoluteAzimuth.vi" Type="VI" URL="../GetSwerveAbsoluteAzimuth.vi"/>
 					<Item Name="GetSwerveEncoders.vi" Type="VI" URL="../GetSwerveEncoders.vi"/>
 					<Item Name="GetSwerveRawAzimuth.vi" Type="VI" URL="../GetSwerveRawAzimuth.vi"/>
@@ -1195,7 +1196,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_localDestDir" Type="Path">/C/Git Checkouts/Robot Builds/2023</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6782B190-04E1-4A41-93AB-3F357B35791E}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">111</Property>
+				<Property Name="Bld_version.build" Type="Int">125</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
