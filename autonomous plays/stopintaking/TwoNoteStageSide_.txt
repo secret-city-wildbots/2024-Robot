@@ -1,0 +1,31 @@
+This play starts on stage side, shoots starting note, and gets the furthest midfield note
+*
+start_x_red = 30
+start_y_red = 150.6
+start_h_red = 60
+start_x_blue = 30
+start_y_blue = 165
+start_h_blue = 300
+*
+DriveWaitForManip(3)
+DrivePath(6,10,-1,StageSubToFarMidField,robot_suffix)
+DrivePath(6,10,-1,FarMidFieldToStageSub,robot_suffix)
+DriveEnd()
+*
+ManipChangeState(0)
+ManipShooterPrespin(on)
+ManipWaitForTime(200)
+ManipSetShooting(on)
+ManipWaitForTime(200)
+ManipSetIntaking(on)
+ManipSetShooting(off)
+ManipWaitForDrive(3)
+ManipStopIntaking()
+ManipChangeState(1)
+ManipChangeState(3)
+ManipWaitForTime(500)
+ManipSetShooting(on)
+ManipWaitForTime(200)
+ManipSetShooting(off)
+ManipShooterPrespin(off)
+ManipEnd()

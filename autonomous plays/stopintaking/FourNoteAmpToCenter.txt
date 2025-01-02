@@ -1,0 +1,56 @@
+This play starts at an angle on the Amp side and then gets the note nearest the amp then gets note in mid field
+*
+start_x_red = 37
+start_y_red = 48.6
+start_h_red = 300
+start_x_blue = 37
+start_y_blue = 267
+start_h_blue = 60
+*
+DriveWaitForManip(3)
+DrivePath(6,10,-1,AmpSubToAmpNote,robot_suffix)
+DriveWaitForManip(12)
+DrivePath(6,10,-1,AmpNoteToMidField,robot_suffix)
+DrivePath(6,10,-1,MidFieldToShootCenter,robot_suffix)
+DriveWaitForManip(22)
+DrivePath(6,10,-1,ShootCenterToCenter,robot_suffix)
+DriveEnd()
+*
+
+ManipChangeState(0)
+ManipShooterPrespin(on)
+ManipWaitForTime(200)
+ManipSetShooting(on)
+ManipWaitForTime(200)
+ManipSetIntaking(on)
+ManipSetShooting(off)
+ManipWaitForDrive(2)
+ManipStopIntaking()
+ManipChangeState(1)
+ManipChangeState(3)
+ManipWaitForTime(400)
+ManipSetShooting(on)
+ManipWaitForTime(200)
+ManipSetIntaking(on)
+ManipSetShooting(off)
+ManipWaitForDrive(4)
+ManipStopIntaking()
+ManipWaitForDrive(5)
+ManipChangeState(1)
+ManipChangeState(3)
+ManipWaitForTime(400)
+ManipSetShooting(on)
+ManipWaitForTime(200)
+ManipChangeState(0)
+ManipSetIntaking(on)
+ManipSetShooting(off)
+ManipWaitForDrive(7)
+ManipStopIntaking()
+ManipChangeState(1)
+ManipChangeState(3)
+ManipWaitForTime(500)
+ManipSetShooting(on)
+ManipWaitForTime(200)
+ManipSetShooting(off)
+ManipShooterPrespin(off)
+ManipEnd()

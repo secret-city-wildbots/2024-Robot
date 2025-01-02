@@ -1,8 +1,8 @@
 This play starts on stage side, shoots starting note, and gets the furthest midfield note
 *
-start_x_red = 57
-start_y_red = 101
-start_h_red = 0
+start_x_red = 30
+start_y_red = 150.6
+start_h_red = 60
 start_x_blue = 30
 start_y_blue = 165
 start_h_blue = 300
